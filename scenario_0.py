@@ -28,18 +28,6 @@ def fitness(x_etat, i):
     w_patch = (1 - p_mortality[i]) * (term1 + term2)
     return w_patch
 
-def over_patches(x_etat):
-    """ Computes the best fitness over the possible patches for a specific state
-
-    Keyword arguments:
-    x_etat -- state of the animal
-    """
-    for i in range(N_PATCH):
-        rhs[i] = fitness(x_etat, i)
-    f_vectors[x_etat - 1, 0] = max(rhs)
-    best_patch = rhs.index(max(rhs)) + 1
-    return [f_vectors[x_etat - 1, 0], best_patch]
-
 def over_states():
     """ Computes the vector of fitness and best patches for a specific time
     """
