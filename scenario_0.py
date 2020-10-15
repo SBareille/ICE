@@ -43,4 +43,3 @@ fxtt = fxtt[:, CRIT_MAX_RANGE]
 
 print(mat_best_patch)
 with np.printoptions(precision = 3):
-    print(fxtt)
