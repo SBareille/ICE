@@ -48,7 +48,6 @@ def over_states():
         fxtt[TIME, x_etat - 1] = temp[0]
         mat_best_patch[TIME, x_etat - 1] = temp[1]
 
-
 X_MAX = 10
 X_CRITICAL = 3
 X_MIN = X_CRITICAL + 1
@@ -81,4 +80,3 @@ fxtt = fxtt[:, CRIT_MAX_RANGE]
 
 print(mat_best_patch)
 with np.printoptions(precision = 3):
-    print(fxtt)
